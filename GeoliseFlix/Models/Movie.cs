@@ -44,12 +44,15 @@ public class Movie
     [StringLength(200)]
     [Display(Name = "Foto")]
     public string Image { get; set; }
+ [NotMapped]
+        [Display(Name = "Duração")]
+        public string HourDuration {get {
+            return TimeSpan.FromMinutes(Duration).ToString(@"%h'h 'mm'min'");
+        }}
 
-    [NotMapped]
-    [Display(Name = "Duração")]
-    public string HourDuration { get {
-        return TimeSpan.FromMinutes(Duration).ToString(@"%h'h 'mm'min'");
-    }}
-}
+        public ICollection<MovieComment> Comments {get; set; }
+        public ICollection<MovieGenre> Genres {get; set; }
+        public ICollection<MovieRating> Ratings {get; set; }
+    }
 
 

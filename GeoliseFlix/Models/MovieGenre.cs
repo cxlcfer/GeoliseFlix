@@ -1,12 +1,17 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-namespace GeoliseFlix.Models
+namespace GeoliseFlix.Models;
+[Table("MovieGenre")]
+public class MovieGenre
 {
-    public class MovieGenre
-    {
-        
-    }
+    [Key, Column(Order = 1)]
+    public int MovieId { get; set; }
+    [ForeignKey("MovieId")]
+    public Movie Movie { get; set; }
+
+    [Key, Column(Order = 2)]
+    public byte GenreId { get; set; }
+    [ForeignKey("GenreId")]
+    public Genre Genre { get; set; }
 }

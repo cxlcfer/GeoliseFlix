@@ -11,7 +11,9 @@ public class Genre
     public byte Id { get; set; }
 
     [Display(Name = "Nome")]
-    [Required(ErrorMessage = "O nome é obrigatório")]
-    [StringLength(30, ErrorMessage = "O nome deve possuir no máximo 30 caracteres")]
+    [Required(ErrorMessage = "O Nome é obrigatório")]
+    [StringLength(30, ErrorMessage = "O Nome deve possuir no maxímo 30 caracteres")]
     public string Name { get; set; }
+
+    public ICollection<MovieGenre> Movies { get; set; }
 }

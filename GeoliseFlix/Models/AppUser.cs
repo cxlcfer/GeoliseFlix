@@ -3,19 +3,19 @@ using Microsoft.AspNetCore.Identity;
 
 namespace GeoliseFlix.Models;
 
-    public class AppUser : IdentityUser 
+    public class AppUser : IdentityUser
     {
         [Required]
         [StringLength(60)]
-        public string Name { get; set; }
+        public string Name {get; set; }
 
         [Required]
         [DataType(DataType.Date)]
-        public DateTime DateOfBirth { get; set; }
+        public DateTime DateOfBirth {get; set; }
 
         [StringLength(200)]
-        public string ProfilePicture { get; set; }
+        public string ProfilePicture {get; set; }
 
-        
+        public ICollection<MovieComment> Comments  {get; set; }
+        public ICollection<MovieRating> Ratings  {get; set; }
     }
-
