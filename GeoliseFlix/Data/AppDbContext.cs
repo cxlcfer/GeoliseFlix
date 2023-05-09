@@ -60,7 +60,7 @@ public class AppDbContext : IdentityDbContext
         builder.Entity<MovieComment>()
                 .HasOne(mc => mc.User)
                 .WithMany(u => u.Comments)
-                .HasForeignKey(mc => mc.MovieId);
+                .HasForeignKey(mc => mc.UserId);
 
         #endregion
 
