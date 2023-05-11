@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GeoliseFlix.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230509134702_criar-banco")]
-    partial class criarbanco
+    [Migration("20230511132940_popular-usuario")]
+    partial class popularusuario
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

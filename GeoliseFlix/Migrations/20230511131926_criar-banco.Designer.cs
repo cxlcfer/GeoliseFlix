@@ -3,6 +3,7 @@ using System;
 using GeoliseFlix.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GeoliseFlix.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230511131926_criar-banco")]
+    partial class criarbanco
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -168,29 +170,6 @@ namespace GeoliseFlix.Migrations
                         .HasDatabaseName("RoleNameIndex");
 
                     b.ToTable("Roles", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "ecd3b986-8201-4693-ae60-d2c83dd43191",
-                            ConcurrencyStamp = "79c9725b-017f-455c-afb4-5f4100ba82da",
-                            Name = "Administrador",
-                            NormalizedName = "ADMINISTRADOR"
-                        },
-                        new
-                        {
-                            Id = "cd99dae1-a279-4a1a-9491-be038c041a41",
-                            ConcurrencyStamp = "38645d2b-5d5d-4d9a-843c-5f220058a83b",
-                            Name = "Moderador",
-                            NormalizedName = "MODERADOR"
-                        },
-                        new
-                        {
-                            Id = "9eb1611c-db45-4a17-844c-94f37ec2d444",
-                            ConcurrencyStamp = "2a29ddb6-8d7d-482f-af89-b0280d04adab",
-                            Name = "Usuário",
-                            NormalizedName = "USUÁRIO"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -344,13 +323,6 @@ namespace GeoliseFlix.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("UserRoles", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = "1cb72cd9-ad84-491d-a711-1aeaad1bb6be",
-                            RoleId = "ecd3b986-8201-4693-ae60-d2c83dd43191"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -389,28 +361,6 @@ namespace GeoliseFlix.Migrations
                         .HasColumnType("varchar(200)");
 
                     b.HasDiscriminator().HasValue("AppUser");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "1cb72cd9-ad84-491d-a711-1aeaad1bb6be",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "fc6655ed-eaf6-4b3b-8cba-3184c0119680",
-                            Email = "geovanahscudeletti@gmail.com",
-                            EmailConfirmed = true,
-                            LockoutEnabled = false,
-                            NormalizedEmail = "GEOVANAHSCUDELETTI@GMAIL.COM",
-                            NormalizedUserName = "CXLCFER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEK4GFk0u+s5l5jZjPJHxnklqfqcWsK0mnxjYOl5nKDSs/rRmfeUwa2HSkgARNdSJdw==",
-                            PhoneNumber = "14991799066",
-                            PhoneNumberConfirmed = true,
-                            SecurityStamp = "683c5dd6-1e2e-4d2a-801b-bc99b529900c",
-                            TwoFactorEnabled = false,
-                            UserName = "cxlcfer",
-                            DateOfBirth = new DateTime(2005, 9, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Geovana Hidalgo Scudeletti",
-                            ProfilePicture = "/img/users/avatar.png"
-                        });
                 });
 
             modelBuilder.Entity("GeoliseFlix.Models.MovieComment", b =>

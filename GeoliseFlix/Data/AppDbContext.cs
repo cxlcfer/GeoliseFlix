@@ -20,6 +20,7 @@ public class AppDbContext : IdentityDbContext
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
+        AppDbSeed seed = new(builder);
         //FluentAPI
         //Personalizar as tabelas do identity
         builder.Entity<IdentityUser>(
