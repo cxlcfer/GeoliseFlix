@@ -1,3 +1,4 @@
+using GeoliseFlix.DataTransferObjects;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,9 +20,19 @@ public class AccountController : Controller
         return View();
     }
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
+    [HttpGet]
+    [AllowAnonymous]
+    public IActionResult Login(string returnUrl)
     {
-        return View("Error!");
+        LoginDto login = new();
+        login.ReturnUrl = returnUrl ?? Url.Content("~/");
+        
+        return View();
+    }
+
+    [HttpPost]
+    public IActionResult Login()
+    {
+        return View();
     }
 }
