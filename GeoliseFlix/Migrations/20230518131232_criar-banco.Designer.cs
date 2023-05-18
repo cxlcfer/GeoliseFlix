@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GeoliseFlix.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230511132940_popular-usuario")]
-    partial class popularusuario
+    [Migration("20230518131232_criar-banco")]
+    partial class criarbanco
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -170,6 +170,29 @@ namespace GeoliseFlix.Migrations
                         .HasDatabaseName("RoleNameIndex");
 
                     b.ToTable("Roles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "885aa5e1-a5d8-4d12-9f03-3afd12600689",
+                            ConcurrencyStamp = "2999476c-0199-4de5-9a19-43db7ddba692",
+                            Name = "Administrador",
+                            NormalizedName = "ADMINISTRADOR"
+                        },
+                        new
+                        {
+                            Id = "7bff6851-7f7b-46b7-a1cb-79ccbe0e216e",
+                            ConcurrencyStamp = "7acde9ba-dde6-4031-9a27-4ddc82880a51",
+                            Name = "Moderador",
+                            NormalizedName = "MODERADOR"
+                        },
+                        new
+                        {
+                            Id = "07402c7b-9a5a-4242-a73d-2dd50307123e",
+                            ConcurrencyStamp = "539aaa11-c458-4611-b94c-c5230a919c3c",
+                            Name = "Usuário",
+                            NormalizedName = "USUÁRIO"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -323,6 +346,13 @@ namespace GeoliseFlix.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("UserRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "27938014-8087-409e-8e4e-c66f44f31d66",
+                            RoleId = "885aa5e1-a5d8-4d12-9f03-3afd12600689"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -361,6 +391,28 @@ namespace GeoliseFlix.Migrations
                         .HasColumnType("varchar(200)");
 
                     b.HasDiscriminator().HasValue("AppUser");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "27938014-8087-409e-8e4e-c66f44f31d66",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "2e7ae4cd-8509-4045-9d99-9c67be4304b3",
+                            Email = "geovanahscudeletti@gmail.com",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "GEOVANAHSCUDELETTI@GMAIL.COM",
+                            NormalizedUserName = "CXLCFER",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMjKrz6EylwtElCj1KBgSO0Gf0cJCH2otFp8DXjlpSLmw1N8vINw5GLGxLpjcd7UBA==",
+                            PhoneNumber = "14991799066",
+                            PhoneNumberConfirmed = true,
+                            SecurityStamp = "1629f805-b927-4b8f-a123-0ab773fece67",
+                            TwoFactorEnabled = false,
+                            UserName = "cxlcfer",
+                            DateOfBirth = new DateTime(2005, 9, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Geovana Hidalgo Scudeletti",
+                            ProfilePicture = "/img/users/avatar.png"
+                        });
                 });
 
             modelBuilder.Entity("GeoliseFlix.Models.MovieComment", b =>

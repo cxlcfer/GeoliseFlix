@@ -172,22 +172,22 @@ namespace GeoliseFlix.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "ecd3b986-8201-4693-ae60-d2c83dd43191",
-                            ConcurrencyStamp = "79c9725b-017f-455c-afb4-5f4100ba82da",
+                            Id = "885aa5e1-a5d8-4d12-9f03-3afd12600689",
+                            ConcurrencyStamp = "2999476c-0199-4de5-9a19-43db7ddba692",
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "cd99dae1-a279-4a1a-9491-be038c041a41",
-                            ConcurrencyStamp = "38645d2b-5d5d-4d9a-843c-5f220058a83b",
+                            Id = "7bff6851-7f7b-46b7-a1cb-79ccbe0e216e",
+                            ConcurrencyStamp = "7acde9ba-dde6-4031-9a27-4ddc82880a51",
                             Name = "Moderador",
                             NormalizedName = "MODERADOR"
                         },
                         new
                         {
-                            Id = "9eb1611c-db45-4a17-844c-94f37ec2d444",
-                            ConcurrencyStamp = "2a29ddb6-8d7d-482f-af89-b0280d04adab",
+                            Id = "07402c7b-9a5a-4242-a73d-2dd50307123e",
+                            ConcurrencyStamp = "539aaa11-c458-4611-b94c-c5230a919c3c",
                             Name = "Usuário",
                             NormalizedName = "USUÁRIO"
                         });
@@ -348,8 +348,8 @@ namespace GeoliseFlix.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "1cb72cd9-ad84-491d-a711-1aeaad1bb6be",
-                            RoleId = "ecd3b986-8201-4693-ae60-d2c83dd43191"
+                            UserId = "27938014-8087-409e-8e4e-c66f44f31d66",
+                            RoleId = "885aa5e1-a5d8-4d12-9f03-3afd12600689"
                         });
                 });
 
@@ -393,18 +393,18 @@ namespace GeoliseFlix.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "1cb72cd9-ad84-491d-a711-1aeaad1bb6be",
+                            Id = "27938014-8087-409e-8e4e-c66f44f31d66",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "fc6655ed-eaf6-4b3b-8cba-3184c0119680",
+                            ConcurrencyStamp = "2e7ae4cd-8509-4045-9d99-9c67be4304b3",
                             Email = "geovanahscudeletti@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "GEOVANAHSCUDELETTI@GMAIL.COM",
                             NormalizedUserName = "CXLCFER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEK4GFk0u+s5l5jZjPJHxnklqfqcWsK0mnxjYOl5nKDSs/rRmfeUwa2HSkgARNdSJdw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMjKrz6EylwtElCj1KBgSO0Gf0cJCH2otFp8DXjlpSLmw1N8vINw5GLGxLpjcd7UBA==",
                             PhoneNumber = "14991799066",
                             PhoneNumberConfirmed = true,
-                            SecurityStamp = "683c5dd6-1e2e-4d2a-801b-bc99b529900c",
+                            SecurityStamp = "1629f805-b927-4b8f-a123-0ab773fece67",
                             TwoFactorEnabled = false,
                             UserName = "cxlcfer",
                             DateOfBirth = new DateTime(2005, 9, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
