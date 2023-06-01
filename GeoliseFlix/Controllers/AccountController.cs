@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GeoliseFlix.Controllers;
 
-[Authorize(Roles = "Administrador")]
 public class AccountController : Controller
 {
     private readonly ILogger<AccountController> _logger;
@@ -22,13 +21,14 @@ public class AccountController : Controller
         _userManager = userManager;
     }
 
+
+    [Authorize(Roles = "Administrador")]
     public IActionResult Index()
     {
         return View();
     }
 
     [HttpGet]
-    [AllowAnonymous]
     public IActionResult Login(string returnUrl)
     {
         LoginDto login = new();
@@ -38,7 +38,6 @@ public class AccountController : Controller
     }
 
     [HttpPost]
-    [AllowAnonymous]
     public async Task<IActionResult> Login(LoginDto login)
     {
         // Verificar o modelo e fazer o login
@@ -70,6 +69,13 @@ public class AccountController : Controller
         }
         return View(login);
     }
+
+    [HttpGet]
+    public IActionResult Register()
+    {
+        return View();
+    }
+
 
 
 
