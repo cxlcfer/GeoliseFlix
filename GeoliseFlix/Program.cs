@@ -9,14 +9,16 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-// Objetos auxiliares da conexão
+// Objetos auxiliares de Conexão
 string conn = builder.Configuration.GetConnectionString("GeoliseFlix");
 var version = ServerVersion.AutoDetect(conn);
 
-builder.Services.AddDbContext<AppDbContext>(options => 
+// Serviço de Conexão com banco de dados
+builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(conn, version)
 );
 
+// Serviço de Gestão de Usuário - Identity
 builder.Services.AddIdentity<AppUser, IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();

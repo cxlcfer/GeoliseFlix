@@ -41,6 +41,9 @@ namespace GeoliseFlix.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<byte>("AgeRating")
+                        .HasColumnType("tinyint unsigned");
+
                     b.Property<short>("Duration")
                         .HasColumnType("smallint");
 
@@ -50,9 +53,6 @@ namespace GeoliseFlix.Migrations
 
                     b.Property<short>("MovieYear")
                         .HasColumnType("Year");
-
-                    b.Property<byte>("MyProperty")
-                        .HasColumnType("tinyint unsigned");
 
                     b.Property<string>("Synopsis")
                         .IsRequired()
@@ -172,22 +172,22 @@ namespace GeoliseFlix.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "885aa5e1-a5d8-4d12-9f03-3afd12600689",
-                            ConcurrencyStamp = "2999476c-0199-4de5-9a19-43db7ddba692",
+                            Id = "63a4d10f-25dd-430d-b997-4d9af05c85e6",
+                            ConcurrencyStamp = "2c00c275-26f3-422d-a3ad-9a98e6bed995",
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "7bff6851-7f7b-46b7-a1cb-79ccbe0e216e",
-                            ConcurrencyStamp = "7acde9ba-dde6-4031-9a27-4ddc82880a51",
+                            Id = "88bd83c9-65ce-4ab4-acec-3441c8a55cd2",
+                            ConcurrencyStamp = "e798d5c9-c15b-407d-83fa-bf886e2f302b",
                             Name = "Moderador",
                             NormalizedName = "MODERADOR"
                         },
                         new
                         {
-                            Id = "07402c7b-9a5a-4242-a73d-2dd50307123e",
-                            ConcurrencyStamp = "539aaa11-c458-4611-b94c-c5230a919c3c",
+                            Id = "3ebcc5b3-a2d8-4b4f-8d32-8d787d374b83",
+                            ConcurrencyStamp = "a318917e-976f-4707-9fdf-b971d521d65a",
                             Name = "Usuário",
                             NormalizedName = "USUÁRIO"
                         });
@@ -348,8 +348,8 @@ namespace GeoliseFlix.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "27938014-8087-409e-8e4e-c66f44f31d66",
-                            RoleId = "885aa5e1-a5d8-4d12-9f03-3afd12600689"
+                            UserId = "91df5147-b62c-4703-a455-2087e41523d0",
+                            RoleId = "63a4d10f-25dd-430d-b997-4d9af05c85e6"
                         });
                 });
 
@@ -393,18 +393,18 @@ namespace GeoliseFlix.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "27938014-8087-409e-8e4e-c66f44f31d66",
+                            Id = "91df5147-b62c-4703-a455-2087e41523d0",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "2e7ae4cd-8509-4045-9d99-9c67be4304b3",
+                            ConcurrencyStamp = "d2853a03-9aa7-4d21-86ba-9be9481d084a",
                             Email = "geovanahscudeletti@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "GEOVANAHSCUDELETTI@GMAIL.COM",
                             NormalizedUserName = "CXLCFER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEMjKrz6EylwtElCj1KBgSO0Gf0cJCH2otFp8DXjlpSLmw1N8vINw5GLGxLpjcd7UBA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEEMe7pZMR8kLYZtl8XW7J4oVcyaxWjAOb2/QstkyXOXrsCJI3iJAZGhL8WkxQXjGhw==",
                             PhoneNumber = "14991799066",
                             PhoneNumberConfirmed = true,
-                            SecurityStamp = "1629f805-b927-4b8f-a123-0ab773fece67",
+                            SecurityStamp = "ebaa2514-e340-44a1-9678-fd27bc674cd7",
                             TwoFactorEnabled = false,
                             UserName = "cxlcfer",
                             DateOfBirth = new DateTime(2005, 9, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),

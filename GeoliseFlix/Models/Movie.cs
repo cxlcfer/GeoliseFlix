@@ -39,7 +39,7 @@ public class Movie
 
     [Display(Name = "Classificação Etária")]
     [Required(ErrorMessage = "A classificação etária é obrigatória")]
-    public byte MyProperty { get; set; }
+    public byte AgeRating { get; set; }
 
     [StringLength(200)]
     [Display(Name = "Foto")]
