@@ -1,4 +1,4 @@
-USE GalloFlix;
+USE GeoliseFlix;
 
 INSERT INTO Genre(Id, Name) VALUES
 (1, 'Ação'),

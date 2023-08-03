@@ -36,7 +36,7 @@ namespace GeoliseFlix.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Title = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    TitleOriginal = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
+                    OriginalTitle = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Synopsis = table.Column<string>(type: "varchar(8000)", maxLength: 8000, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
@@ -329,20 +329,20 @@ namespace GeoliseFlix.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "3ebcc5b3-a2d8-4b4f-8d32-8d787d374b83", "a318917e-976f-4707-9fdf-b971d521d65a", "Usuário", "USUÁRIO" },
-                    { "63a4d10f-25dd-430d-b997-4d9af05c85e6", "2c00c275-26f3-422d-a3ad-9a98e6bed995", "Administrador", "ADMINISTRADOR" },
-                    { "88bd83c9-65ce-4ab4-acec-3441c8a55cd2", "e798d5c9-c15b-407d-83fa-bf886e2f302b", "Moderador", "MODERADOR" }
+                    { "68f75199-c7d1-40c3-bb50-379906af98dc", "96ddb44b-d713-47ea-b566-8e1de0eda75e", "Administrador", "ADMINISTRADOR" },
+                    { "adf8659c-3138-4505-a6bd-c1385ee68137", "120127f3-9d73-4e8e-b0bf-ec2fce98cea5", "Moderador", "MODERADOR" },
+                    { "f7f00978-0d22-4fc0-b196-b5682ae1d545", "b74e06b9-3472-4a8a-bac4-dcf4f14168ad", "Usuário", "USUÁRIO" }
                 });
 
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "DateOfBirth", "Discriminator", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "Name", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "ProfilePicture", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "91df5147-b62c-4703-a455-2087e41523d0", 0, "d2853a03-9aa7-4d21-86ba-9be9481d084a", new DateTime(2005, 9, 29, 0, 0, 0, 0, DateTimeKind.Unspecified), "AppUser", "geovanahscudeletti@gmail.com", true, false, null, "Geovana Hidalgo Scudeletti", "GEOVANAHSCUDELETTI@GMAIL.COM", "CXLCFER", "AQAAAAEAACcQAAAAEEMe7pZMR8kLYZtl8XW7J4oVcyaxWjAOb2/QstkyXOXrsCJI3iJAZGhL8WkxQXjGhw==", "14991799066", true, "/img/users/avatar.png", "ebaa2514-e340-44a1-9678-fd27bc674cd7", false, "cxlcfer" });
+                values: new object[] { "eee8f018-34f9-47c9-b40f-f15adab9f42a", 0, "08da8138-870d-4931-92ac-cfe04bfb41b8", new DateTime(2005, 9, 29, 0, 0, 0, 0, DateTimeKind.Unspecified), "AppUser", "geovanahscudeletti@gmail.com", true, false, null, "Geovana Hidalgo Scudeletti", "GEOVANAHSCUDELETTI@GMAIL.COM", "CXLCFER", "AQAAAAEAACcQAAAAEN+smfv8xvd9jykoYrERtFto5OBiF9G6dgO0BcH6FBmou+RwNkkdSD07/Hk5g3Eidw==", "14991799066", true, "/img/users/avatar.png", "55111d0e-df7c-4fa9-8105-169410f50bc5", false, "cxlcfer" });
 
             migrationBuilder.InsertData(
                 table: "UserRoles",
                 columns: new[] { "RoleId", "UserId" },
-                values: new object[] { "63a4d10f-25dd-430d-b997-4d9af05c85e6", "91df5147-b62c-4703-a455-2087e41523d0" });
+                values: new object[] { "68f75199-c7d1-40c3-bb50-379906af98dc", "eee8f018-34f9-47c9-b40f-f15adab9f42a" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_MovieComment_MovieId",
