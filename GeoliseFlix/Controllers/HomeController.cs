@@ -33,4 +33,14 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+
+    public IActionResult Movie(int? id)
+    {
+        var movie = _context.Movies
+            .Where(m => m.Id == id)
+            .Include(m => m.Genres)
+            .ThenInclude(g => g.Genre)
+            .SingleOrDefault();
+        return View(movie);
+    }
 }

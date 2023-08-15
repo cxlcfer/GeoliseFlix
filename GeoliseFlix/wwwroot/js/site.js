@@ -25,4 +25,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 showLoading();
         })
     }
+
+    (() => {
+        'use strict';
+        if (document.querySelector('#sidebarToggler') != null) {
+            document.querySelector('#sidebarToggler').addEventListener('click', () => {
+                document.querySelector('#sidebar').classList.toggle('d-none')
+            })
+        }
+    })()
+
+    
+
+    
+    
 });
+
