@@ -11,14 +11,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GeoliseFlix.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230803132847_criando-banco")]
+    [Migration("20230919133212_criando-banco")]
     partial class criandobanco
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.16")
+                .HasAnnotation("ProductVersion", "6.0.20")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("GeoliseFlix.Models.Genre", b =>
@@ -174,24 +174,24 @@ namespace GeoliseFlix.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "68f75199-c7d1-40c3-bb50-379906af98dc",
-                            ConcurrencyStamp = "96ddb44b-d713-47ea-b566-8e1de0eda75e",
+                            Id = "f4adeb72-dace-48d0-80d9-8c324a54bc9d",
+                            ConcurrencyStamp = "6b948c94-7e9f-4c13-a345-c4e5e105a68f",
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "adf8659c-3138-4505-a6bd-c1385ee68137",
-                            ConcurrencyStamp = "120127f3-9d73-4e8e-b0bf-ec2fce98cea5",
+                            Id = "ba51db86-ff47-4da9-8788-bd269b328f54",
+                            ConcurrencyStamp = "a21d0133-e883-4b30-a007-3f8d768c3e63",
                             Name = "Moderador",
                             NormalizedName = "MODERADOR"
                         },
                         new
                         {
-                            Id = "f7f00978-0d22-4fc0-b196-b5682ae1d545",
-                            ConcurrencyStamp = "b74e06b9-3472-4a8a-bac4-dcf4f14168ad",
+                            Id = "5708522b-d96a-4738-ba58-4c64b89686f0",
+                            ConcurrencyStamp = "58eff6e6-4244-4c8c-aa8c-c171ccb28fc5",
                             Name = "Usuário",
-                            NormalizedName = "USUÁRIO"
+                            NormalizedName = " USUÁRIO"
                         });
                 });
 
@@ -350,8 +350,8 @@ namespace GeoliseFlix.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "eee8f018-34f9-47c9-b40f-f15adab9f42a",
-                            RoleId = "68f75199-c7d1-40c3-bb50-379906af98dc"
+                            UserId = "ba4fffca-5cfc-48c1-a247-82e8f74ac966",
+                            RoleId = "f4adeb72-dace-48d0-80d9-8c324a54bc9d"
                         });
                 });
 
@@ -395,22 +395,22 @@ namespace GeoliseFlix.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "eee8f018-34f9-47c9-b40f-f15adab9f42a",
+                            Id = "ba4fffca-5cfc-48c1-a247-82e8f74ac966",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "08da8138-870d-4931-92ac-cfe04bfb41b8",
-                            Email = "geovanahscudeletti@gmail.com",
+                            ConcurrencyStamp = "fbccff8f-b195-499b-870f-4ccf0eb3cfdc",
+                            Email = "admin@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
-                            NormalizedEmail = "GEOVANAHSCUDELETTI@GMAIL.COM",
-                            NormalizedUserName = "CXLCFER",
-                            PasswordHash = "AQAAAAEAACcQAAAAEN+smfv8xvd9jykoYrERtFto5OBiF9G6dgO0BcH6FBmou+RwNkkdSD07/Hk5g3Eidw==",
-                            PhoneNumber = "14991799066",
+                            NormalizedEmail = "ADMIN@GMAIL.COM",
+                            NormalizedUserName = "ADMIN",
+                            PasswordHash = "AQAAAAEAACcQAAAAEN/F2Dsxn4hUs6aNUTs1FOgyE4Svk0XthDxF+0VLCaWJJcjAvfGGSY4gYsvErimVxg==",
+                            PhoneNumber = "14912345678",
                             PhoneNumberConfirmed = true,
-                            SecurityStamp = "55111d0e-df7c-4fa9-8105-169410f50bc5",
+                            SecurityStamp = "f32362d0-ab14-4294-9a49-7a7fa888843d",
                             TwoFactorEnabled = false,
-                            UserName = "cxlcfer",
-                            DateOfBirth = new DateTime(2005, 9, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Geovana Hidalgo Scudeletti",
+                            UserName = "Admin",
+                            DateOfBirth = new DateTime(2005, 11, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Name = "Seu Nome Completo",
                             ProfilePicture = "/img/users/avatar.png"
                         });
                 });
