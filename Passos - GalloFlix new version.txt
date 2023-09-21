@@ -27,13 +27,13 @@ dotnet sln add GeoliseFlix\GeoliseFlix.csproj
 
 
 -- Instalar os pacotes do Entity - para acesso a dados
-dotnet add package Microsoft.EntityFrameworkCore --version 6.0.16
+dotnet add package Microsoft.EntityFrameworkCore --version 6.0.22
 dotnet add package Pomelo.EntityFrameworkCore.MySql --version 6.0.2
-dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.0.16
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.0.22
 
 
 -- Instalar o pacote do Identity - para gestão de usuários
-dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 6.0.16
+dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 6.0.22
 
 
 -- Pasta Models
@@ -2320,18 +2320,18 @@ main {
 
 </html> 
 
-PAROU AQUI !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PAROU AQUI !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 -- Salve tudo e execute. Faça login, observe a navbar, tente entrar na área administrativa
 
 
 -- Abra o terminal e execute os comandos abaixo:
-dotnet add package Microsoft.EntityFrameworkCore --version 6.0.20
-dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.0.20
-dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 6.0.20
+dotnet add package Microsoft.EntityFrameworkCore --version 6.0.22
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.0.22
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 6.0.22
 
-dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 6.0.15
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design --version 6.0.16
 
 dotnet tool install -g dotnet-aspnet-codegenerator
 

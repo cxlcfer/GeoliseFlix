@@ -44,13 +44,13 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link @(ViewBag.Title == "Filmes" ? "active" : "link-body-emphasis")">
+                        <a asp-action="Index" asp-controller="Movies" class="nav-link @(ViewBag.Title == "Filmes" ? "active" : "link-body-emphasis")">
                             <i class="bi bi-film me-2"></i>
                             Filmes
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link @(ViewBag.Title == "Gêneros" ? "active" : "link-body-emphasis")">
+                        <a asp-action="Index" asp-controller="Genres" class="nav-link @(ViewBag.Title == "Gêneros" ? "active" : "link-body-emphasis")">
                             <i class="bi bi-list-stars me-2"></i>
                             Gêneros
                         </a>
@@ -106,7 +106,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </nav>
-                <div class="container-fluid p-5 pt-3">
+                <div class="container-fluid p-3">
                     @RenderBody()
                 </div>
             </div>
